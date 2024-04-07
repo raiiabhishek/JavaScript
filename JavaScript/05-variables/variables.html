@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+      /*the word let creates variable, cant start variable name with numbers or special command*/
+
+      let variable1 = 3; // this is also called assigning the value in the variable
+      console.log(variable1);
+      let calculation = 2 + 2;
+      console.log(calculation);
+      console.log(calculation + 2);
+
+      let result = calculation + 2;
+      console.log(result);
+
+      let message = 'Hello';
+      console.log(message);
+      console.log(";"); //can run multiple instructions, it has a special feature known as "semicolon insertion" which inserst last semicolon automatically.
+
+      variable1 = 5; //changning the variable value, which is known as re-assigning a value in a variable. we dont use let' key word to re-assigne the value, it creates the new varibale. Also varibale can be reassigned as many times as we want
+      console.log(variable1);
+
+      variable1 = variable1 + 2;
+      console.log(variable1);
+
+      const varibale2 = 'HI'; //This value stays constant and can't be changes later, which is also a best practice to use.
+
+      var varibale3 = 3; //This is origianal way to create varible yet still we use const by default
+
+      console.log(typeof varibale2);
+    </script>
+  </body>
+</html>

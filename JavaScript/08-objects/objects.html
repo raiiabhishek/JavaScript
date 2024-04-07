@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /* Objects lets us to group multiple values together, using property we can acess specific values in the object.
+       */
+      const product = {
+        name: "socks", // this is called property value pair
+        price: 999,
+      };
+      console.log(product);
+      console.log(product.name); // acessing using property name
+      console.log(product.price); // this is also called dot notaition
+
+      product.name = "cotton socks"; //using the proprty to change the value inside the objects
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+
+      const product2 = {
+        name: "shirt",
+        ["delivery-time"]: "1 day", // bracket notation, brakcet are optional if we have sting only
+        rating: {
+          /* this is called nested object, we use this to make it more organized. We can use dot notation or bracket notation to acess the nested object values */
+          stars: 4.4,
+          count: 87,
+        },
+        fun: function function1() {
+          /* creating function inside the object, we can aceess the function with dot notation or bracket notation. */
+          console.log("function inside object");
+        },
+      };
+      console.log(product2);
+      console.log(product2.name);
+
+      console.log(product2["name"]); // this is called bracket notation, which works similar to dot notation. We use this when dot notation is not working, for example
+      //console.log(product2.delivery-time); // which gives error but
+      console.log(product2["delivery-time"]); //we ususally use dot notation
+
+      console.log(product2.rating.count); // using dot notation to acess the nested objects
+      console.log(product2.rating.stars);
+
+      product2.fun(); // using dot notation to acess the function inside the object
+
+      console.log(typeof console.log); // this is called method, consle is object provided by JS and log is function that is saved inside the console object
+
+      /*Built-in-objects*/
+      /*
+      JSON
+      localstorage
+      */
+
+      //JSON is a syntax, which is similar to JS objects but has less features, it doesnot support sigle quotes, doesnot support function, it is more universal, JASON syntax can be understood by almost every programming language where as JS syntax can only be understood by JS.
+
+      JSON.stringify(product2); // stringify is a method of the JSON object,
+      console.log(JSON.stringify(product2)); // it results in string
+
+      const jsonString = JSON.stringify(product2);
+
+      console.log(JSON.parse(jsonString)); // converts JSON sting to JS objects
+
+      /*Local storage, is used to store the values permanentaly which doesnt delete when we refresh a pages */
+
+      /* Auto-boxing
+      JS wraps the strings in a special objects. Auto boxing deosnot work with null and undefiend, it gives an error */
+      console.log("hello".length); // checks the length of string
+      console.log("hello".toUpperCase()); //converts to uppercase HELLO
+
+      /* Object are refrences */
+
+      const object1 = {
+        // even if we use cont we can still change the value inside the object.
+        message: "hello",
+      };
+      const object2 = object1; // this makes the copy if the reference that points to the object, which is 'hello' in this case. This is called copy by references
+
+      object1.message = "Good work";
+      console.log(object1); // changing value in object reference
+      console.log(object2);
+
+      const object3 = {
+        message: "Good work",
+      };
+      console.log(object3 === object1); // compares the references not the objects, which results false.
+      console.log(object2 === object1); // this have the same references,. When comparing two variables that contains objects, it actually compare the references, but not the values inside.
+
+      const object4 = {
+        message: "Good work",
+        price: 799
+      };
+      //   const message = object4.message;
+      const { message, price } = object4;
+      console.log(message); // Destructing short-cut proprty, we can use this for multiple properties.
+      console.log(price); // It is easier way to take properties out of an objects
+    
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans and if else statement</title>
+  </head>
+  <body>
+    <script>
+      const hour = 16;
+      const name = "Abhishek";
+      if (hour >= 0 && hour <= 12) {
+        console.log(`Good Morning ${name}!!`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log(`Good Afternoon ${name}!!`);
+      } else {
+        console.log(`Good Night ${name} !!`);
+      }
+      //logical operators lets us combine boolean values
+
+      console.log(true && false); //Checks both side conditions
+      console.log(0.1 > 0 && 0.1 > 1);
+
+      //logical operator
+      console.log(true || false); // or operator, check one of the side is true
+      console.log(!true); // not operator
+
+      if (5) {
+        console.log("truthy"); //truthy and fasly value
+      }
+      if (0) {
+        console.log("falsy");
+      }
+
+      // false, 0 , '', NaN, undefined, null are the falsy values. We use falsy and truthy value for short cuts !
+
+
+      const cartQuantity = 10;
+      if (cartQuantity) {
+        console.log('Cart has products !');
+      } else{
+        console.log('Cart has no products !');
+      }
+      
+
+      console.log (!0); // not operator
+      console.log ('text'/5); // not a number
+
+      /* undefined value*/
+      let variable1;
+      console.log(variable1);
+
+
+
+      //Ternary operator. It is similar to if else statement
+
+      const resuslt = 10 ? 'truthy' : 'falsy';
+      console.log(resuslt);
+
+
+      false && console.log('hello'); // and operator stops after it checks the first falue
+      const message = 5 && ('Hi');
+      console.log(message);
+
+
+      false || console.log('Hello'); // or operator will also chcecks the first value is true or not if true then it stops early.
+
+
+      const currency = undefined || 'USD' // this is called defatult operator for if statements 
+      console.log(currency);
+
+
+
+    </script>
+  </body>
+</html>

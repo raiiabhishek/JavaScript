@@ -1,0 +1,20 @@
+button {
+  background-color: red;
+  color: white;
+  border: none;
+}
+.Red-but {
+  color: white;
+  background-color: crimson;
+  border: none;
+}
+.cart-button {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+}
+.buy-button {
+  background-color: orange;
+  color: black;
+  cursor: pointer;
+}
